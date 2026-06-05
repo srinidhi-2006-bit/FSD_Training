@@ -1,0 +1,39 @@
+/*
+o Universal selector * to reset margin/padding
+o Element selector to style all <h2>
+o ID selector #mainHeader for the banner
+o Class selector .eventCard for event containers
+o Grouping selector for h3, p to style together
+*/
+
+
+/*Universal selector * to reset margin and padding*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Element selector to style all h2 elements*/
+h2{
+    color: rgb(5, 213, 250);
+    text-align: center;
+}
+/*ID selector for the banner*/
+#mainHeader{
+    background-color: #788d97;
+    color: rgb(11, 254, 7);
+    text-align: center;
+    padding: 20px;
+}
+/*Class selector for event containers*/
+.eventCard{
+    background-color: #c3aaaa;
+    color: rgb(238, 16, 179);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+/*Grouping selector for h3 and p elements*/
+h3, p{
+    color: rgb(110, 8, 244);
+    text-align: center;
+}

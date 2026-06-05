@@ -1,0 +1,38 @@
+/*
+• Add a media query for screens smaller than 768px
+• Stack navigation links vertically instead of horizontally
+• Reduce image sizes and font sizes
+• Use %, vw, vh for flexible layouts
+*/
+
+/*Media query for screens smaller than 768px*/
+@media (max-width: 768px) {
+    /*Stack navigation links vertically*/
+    nav ul {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    /*Reduce image sizes*/
+    img {
+        width: 100%; 
+        height: auto; 
+    }
+    /*Reduce font sizes*/
+    h1 {
+        font-size: 24px; 
+    }
+    p {
+        font-size: 16px; 
+    }
+}
+/*Using % for flexible layouts*/
+.container {
+    width: 80%; 
+    margin: 0 auto; 
+}
+/*Using vw and vh for flexible layouts*/
+.header {
+    height: 10vh; 
+}
+

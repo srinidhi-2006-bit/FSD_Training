@@ -1,0 +1,28 @@
+/*
+Create a news article section and apply:
+column-count: 2;
+column-gap: 30px;
+column-rule: 1px solid gray;
+*/
+
+/*Styling the news article section with multi-column layout*/
+.news-article {
+    column-count: 2; 
+    column-gap: 30px; 
+    column-rule: 1px solid gray; 
+    padding: 20px; 
+    background-color: #46cfcd; 
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+}
+
+/*Styling headings and paragraphs within the news article*/
+.news-article h2 {
+    color: #333; 
+    margin-bottom: 10px; 
+}
+.news-article p {
+    color: #555;
+    line-height: 1.6; 
+    margin-bottom: 15px;
+}

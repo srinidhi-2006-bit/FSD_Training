@@ -1,0 +1,34 @@
+/*
+• Use HEX and RGBA for setting text and background colors
+• Add a background image to the body with fallback color
+• Apply gradients to section headers using background: linear-gradient(...)
+*/
+
+/*Subheader styles with RGBA background color*/
+h2 {
+    background-color: rgba(255, 126, 95, 0.8);
+    color: rgb(216, 207, 87); 
+    text-align: center;
+    padding: 15px;
+}
+/*Paragraph styles with HEX background color*/
+p {
+    background-color: #feb47b;
+    color: rgb(120, 133, 205); 
+    text-align: center;
+    padding: 10px;
+}
+
+/*Background styles for the body with fallback color and image*/
+body {
+    background-color: #333; 
+    background-image: url('image.jpeg');
+    background-size: cover;
+}
+/*Header styles with linear gradient background*/
+h1 {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); 
+    color: rgb(185, 87, 175);
+    text-align: center;
+    padding: 20px;
+}

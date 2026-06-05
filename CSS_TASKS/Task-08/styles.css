@@ -1,0 +1,30 @@
+/*
+Use developer tools to inspect and tweak box model properties
+• Add border, padding, and margin to .eventCard
+• Add outline to highlight selected fields in a form
+• Compare visibility: hidden vs. display: none
+*/
+
+/*Styling .eventCard with border, padding, and margin*/
+.eventCard {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px; 
+    background-color: #b897b4; 
+    color: white; 
+    border-radius: 10px; 
+    
+}
+
+/*Styling form fields with outline to highlight selected fields*/
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #ff7e5f;
+}
+
+/*Comparing visibility: hidden vs. display: none*/
+.hidden {
+    visibility: hidden; 
+}
+.none {
+    display: none;
+}

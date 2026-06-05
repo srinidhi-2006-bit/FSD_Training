@@ -1,0 +1,32 @@
+/*
+• Style links with :link, :hover, :active, and :visited pseudo-classes
+• Use list-style-type, list-style-position, and remove bullets from nav menus
+• Add padding and margin to list items for spacing
+*/
+/*Styling links with pseudo-classes*/
+a:link {
+    color: rgb(247, 8, 8); /* Unvisited link color */
+    text-decoration: none; /* Remove underline */
+}
+a:visited {
+    color: rgb(241, 238, 7); /* Visited link color */
+}
+a:hover {
+    color: #09e927; /* Hover link color */
+    text-decoration: underline; /* Underline on hover */
+}
+a:active {
+    color: #1509fc; /* Active link color */
+}
+/*Styling unordered list for navigation menu*/
+ul {
+    list-style-type: none; /* Remove bullets */
+    list-style-position: inside; /* Position bullets inside the list item */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+/*Styling list items for spacing*/
+li {
+    padding: 10px; /* Add padding for spacing */
+    margin: 5px 0; /* Add margin between list items */
+}

@@ -1,0 +1,26 @@
+/*
+• Style table, th, and td with borders, padding, and background color
+• Add zebra striping to rows using nth-child(even)
+• Use border-collapse: collapse and text-align: center
+*/
+
+/*Styling table with borders, padding, and background color*/
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+th, td {
+    border: 2px solid #151414;
+    padding: 8px; 
+    background-color: #e4c0df;
+    text-align: center; 
+}
+/*Add zebra striping to rows using nth-child(even)*/
+tr:nth-child(even) {
+    background-color: #e6e6e6; 
+}
+/*Style table headers with a different background color*/
+th {
+    background-color: #4CAF50; 
+    color: white; 
+}

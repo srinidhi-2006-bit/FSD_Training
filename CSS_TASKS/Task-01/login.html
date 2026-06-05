@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-01</title>
+    <!--Use an embedded <style> tag in the <head> to define body background.-->
+    <style>
+        body {
+            background-color: rgb(216, 146, 158);
+        }
+    </style>
+    <!--Link an external stylesheet styles.css and move all reusable styles there.-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Apply an inline style to make one heading red-->
+    <h2 style='color:red'>Login</h2>
+    <form action="/submit-login" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
