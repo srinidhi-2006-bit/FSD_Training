@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+     /* 
+    animation-name:moveBall;
+    animation-duration:4s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite 
+    */
+    animation: moveBall 5s linear infinite;
+}
+@keyframes moveBall {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 500px;
+    }
+    100% {
+        left: 0;
+    }
+}

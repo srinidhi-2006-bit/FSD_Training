@@ -1,0 +1,25 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+.loader {
+    border: 16px solid #0af702;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    /* 
+    animation-name:spin;
+    animation-duration:2s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite 
+    */
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    /* to-0% from-100%*/
+    to { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
