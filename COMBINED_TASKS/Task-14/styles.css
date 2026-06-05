@@ -1,0 +1,32 @@
+.product-card {
+  max-width: 350px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: pink;
+}
+.product-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+/*image zoom-in on hover*/
+.product-image img:hover {
+  transform: scale(1.1);
+}
+
+.buy-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #dce689;
+  color: rgb(16, 12, 238);
+  cursor: pointer;
+  font-size:20px;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 600px) {
+  .product-card {
+    background-color:rgb(109, 248, 248);
+  }
+}
