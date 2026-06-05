@@ -1,0 +1,67 @@
+<!--
+5. Event Registration Form
+Scenario: Residents need to register for events.
+Objective: Practice input types, validation, placeholder, autofocus, and output
+Task:
+• Include fields: name (text), email (email), date (date), event type (select), message
+(textarea)
+• Add placeholder, required, and autofocus
+• Display a confirmation message using <output> when the form is submitted
+• Style the form using CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-05</title>
+    <style>
+        form{
+            width:300px;
+            padding:20px;
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        function registerEvent(){
+            document.getElementById("output").value =
+            "Registration Successful";
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="registerEvent(); return false;">
+        <input type="text"
+            placeholder="Enter Name"
+            required
+            autofocus>
+        <br><br>
+        <input type="email"
+            placeholder="Enter Email"
+            required>
+        <br><br>
+        <label for="event-date">Date</label><br>
+        <input type="date"
+            id="event-date"
+            name="event-date"
+            title="Select a date"
+            placeholder="Select Date"
+            required>
+        <br><br>
+        <label for="event-type">Event Type</label><br>
+        <select id="event-type" name="event-type" title="Select event type" required>
+            <option>Music</option>
+            <option>Sports</option>
+            <option>Art</option>
+        </select>
+        <br><br>
+        <textarea placeholder="Message"></textarea>
+        <br><br>
+        <button type="submit">
+            Register
+        </button>
+        <br><br>
+        <output id="output"></output>
+    </form>
+</body>
+</html>

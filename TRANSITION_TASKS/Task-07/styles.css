@@ -1,0 +1,23 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #2bdb39;
+}
+nav a {
+    color: rgb(243, 34, 6);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}   
+nav a:hover {
+    color: #0921fd;
+    font-size: 30px;
+    text-decoration: underline;
+}

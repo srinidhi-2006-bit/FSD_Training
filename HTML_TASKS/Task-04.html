@@ -1,0 +1,56 @@
+<!--
+4. Image Gallery for Community Events
+Scenario: Show images from past events in a table layout.
+Objective: Work with <img>, tables, and formatting tags.
+Task:
+• Use a <table> with 2 rows and 3 columns of <img> tags
+• Include alt, title, and style each image with borders using a class
+• Add a caption to describe each event
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-04</title>
+    <style>
+        .event-image{
+            width:150px;
+            height:100px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <img src="event1.jpg" alt="Event 1" title="Event 1" class="event-image">
+                <p>Music Festival</p>
+            </td>
+            <td>
+                <img src="event2.jpg" alt="Event 2" title="Event 2" class="event-image">
+                <p>Food Fair</p>
+            </td>
+            <td>
+                <img src="event3.jpg" alt="Event 3" title="Event 3" class="event-image">
+                <p>Art Show</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="event4.jpg" alt="Event 4" title="Event 4" class="event-image">
+                <p>Sports Day</p>
+            </td>
+            <td>
+                <img src="event5.jpg" alt="Event 5" title="Event 5" class="event-image">
+                <p>Book Expo</p>
+            </td>
+            <td>
+                <img src="event6.jpg" alt="Event 6" title="Event 6" class="event-image">
+                <p>Community Meet</p>
+            </td>
+        </tr>
+</table>
+</body>
+</html>

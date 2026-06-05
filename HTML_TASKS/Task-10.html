@@ -1,0 +1,35 @@
+<!--
+10.Debugging with Chrome DevTools
+Scenario: A few users report layout issues and script errors.
+Objective: Use Chrome DevTools and VS Code features to debug.
+Task:
+• Use “Inspect Element” to modify styles and experiment live
+• Use the Console tab to view logs from your <script>
+• Add breakpoints in JS and reload the page to watch variable values
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-10</title>
+    <script>
+        let totalUsers = 50;
+        console.log("Total Users:", totalUsers);
+        function checkUsers() {
+            let activeUsers = 25;
+            console.log("Active Users:", activeUsers);
+            debugger;
+            document.getElementById("output").innerHTML =
+            "Check Console Output";
+        }
+    </script>
+</head>
+<body>
+    <h2>Debugging Example</h2>
+    <button onclick="checkUsers()">
+        Run Script
+    </button>
+    <p id="output"></p>
+</body>
+</html>

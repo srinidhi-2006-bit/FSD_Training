@@ -1,0 +1,56 @@
+<!--
+9. Geolocation for Event Mapping
+Scenario: Locate the nearest event to the user.
+Objective: Practice geolocation.getCurrentPosition, error handling, and options
+Task:
+• Create a button “Find Nearby Events”
+• On click, use getCurrentPosition to get and display coordinates
+• Handle permission denial and timeouts
+• Use high accuracy options
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-09</title>
+    <script>
+        function findLocation() {
+            navigator.geolocation.getCurrentPosition(
+                showPosition,
+                showError,
+                {
+                    enableHighAccuracy: true,
+                    timeout: 5000
+                }
+            );
+        }
+        function showPosition(position) {
+            document.getElementById("result").innerHTML =
+            "Latitude: " +
+            position.coords.latitude +
+            "<br>Longitude: " +
+            position.coords.longitude;
+        }
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Permission Denied");
+                    break;
+                case error.TIMEOUT:
+                    alert("Request Timed Out");
+                    break;
+                default:
+                    alert("Location Error");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Find Nearby Events</h2>
+    <button onclick="findLocation()">
+        Find Nearby Events
+    </button>
+    <p id="result"></p>
+</body>
+</html>

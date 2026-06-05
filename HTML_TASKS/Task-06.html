@@ -1,0 +1,80 @@
+<!--
+6. Event Feedback with Events Handling
+Scenario: Collect real-time feedback and interactions from the user.
+Objective: Handle blur, change, click, double-click, and keyboard events.
+Task:
+• Use onblur to validate a phone number field
+• Use onchange on a dropdown to display the selected event fee
+• onclick on a submit button to show a confirmation
+• ondblclick on an image to enlarge it
+• Capture key events in the feedback textarea and count characters
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-06</title>
+    <script>
+        function validatePhone() {
+            let phone = document.getElementById("phone").value;
+            if (phone.length != 10) {
+                alert("Enter a valid 10-digit phone number");
+            }
+        }
+        function showFee() {
+            let event = document.getElementById("eventType").value;
+            let fee = document.getElementById("fee");
+            if (event == "Music") {
+                fee.innerHTML = "Fee: ₹200";
+            }
+            else if (event == "Sports") {
+                fee.innerHTML = "Fee: ₹150";
+            }
+            else {
+                fee.innerHTML = "Fee: ₹100";
+            }
+        }
+        function confirmRegistration() {
+            alert("Feedback Submitted Successfully");
+        }
+        function enlargeImage() {
+            document.getElementById("eventImage").style.width = "300px";
+        }
+        function countCharacters() {
+            let text = document.getElementById("feedback").value;
+            document.getElementById("count").innerHTML = text.length;
+        }
+    </script>
+</head>
+<body>
+    <h2>Event Feedback</h2>
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter 10-digit phone number" title="Enter your 10-digit phone number" onblur="validatePhone()">
+    <br><br>
+    <label for="eventType">Select Event:</label>
+    <select id="eventType" onchange="showFee()" title="Select event type">
+        <option>Music</option>
+        <option>Sports</option>
+        <option>Art</option>
+    </select>
+    <p id="fee"></p>
+    <img src="event.jpg"
+         id="eventImage"
+         width="150"
+         alt="Event banner"
+         ondblclick="enlargeImage()">
+    <br><br>
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback"
+              rows="5"
+              cols="30"
+              title="Write your feedback"
+              placeholder="Type your feedback here..."
+              onkeyup="countCharacters()"></textarea>
+    <p>Characters: <span id="count">0</span></p>
+    <button onclick="confirmRegistration()">
+        Submit
+    </button>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    display:flex;
+    background-color: #08f51c;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    padding:20px;
+}
+.card:hover {
+    width: 250px;
+    height: 250px;
+    background-color: orange;
+}

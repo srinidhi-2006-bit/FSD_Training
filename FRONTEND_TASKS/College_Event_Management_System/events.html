@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - College Event Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-calendar-alt me-2"></i>Event Management
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">All Events</h1>
+            <p class="lead">Explore and register for our exciting upcoming events</p>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search events...">
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Sports">Sports</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" id="monthFilter">
+                        <option value="">All Months</option>
+                        <option value="12">December</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="eventsContainer">
+                <!-- Event Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100 event-item" data-category="Technical" data-month="12">
+                        <div class="event-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Technical</span>
+                            <h5 class="card-title fw-bold">Technical Quiz</h5>
+                            <p class="card-text text-muted">Test your knowledge across various technical domains including programming, databases, and web technologies.</p>
+                            <div class="event-details">
+                                <p class="mb-2"><small><i class="fas fa-calendar me-2 text-primary"></i>15 Dec 2024</small></p>
+                                <p class="mb-2"><small><i class="fas fa-clock me-2 text-primary"></i>2:00 PM - 4:00 PM</small></p>
+                                <p><small><i class="fas fa-map-marker me-2 text-primary"></i>Main Auditorium</small></p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="registration.html" class="btn btn-primary btn-sm w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100 event-item" data-category="Technical" data-month="12">
+                        <div class="event-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Technical</span>
+                            <h5 class="card-title fw-bold">Hackathon</h5>
+                            <p class="card-text text-muted">24-hour coding challenge where teams build innovative solutions. Win amazing prizes and get mentorship from industry experts.</p>
+                            <div class="event-details">
+                                <p class="mb-2"><small><i class="fas fa-calendar me-2 text-primary"></i>20-21 Dec 2024</small></p>
+                                <p class="mb-2"><small><i class="fas fa-clock me-2 text-primary"></i>9:00 AM - 9:00 AM (Next Day)</small></p>
+                                <p><small><i class="fas fa-map-marker me-2 text-primary"></i>Lab Block</small></p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="registration.html" class="btn btn-primary btn-sm w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100 event-item" data-category="Technical" data-month="12">
+                        <div class="event-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Technical</span>
+                            <h5 class="card-title fw-bold">Poster Presentation</h5>
+                            <p class="card-text text-muted">Showcase your research and innovative ideas through professional poster presentations. Get feedback from judges and peers.</p>
+                            <div class="event-details">
+                                <p class="mb-2"><small><i class="fas fa-calendar me-2 text-primary"></i>18 Dec 2024</small></p>
+                                <p class="mb-2"><small><i class="fas fa-clock me-2 text-primary"></i>1:00 PM - 5:00 PM</small></p>
+                                <p><small><i class="fas fa-map-marker me-2 text-primary"></i>Seminar Hall A</small></p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="registration.html" class="btn btn-primary btn-sm w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100 event-item" data-category="Technical" data-month="12">
+                        <div class="event-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                        <div class="card-body">
+                            <span class="badge bg-warning mb-2">Technical</span>
+                            <h5 class="card-title fw-bold">Coding Contest</h5>
+                            <p class="card-text text-muted">Competitive programming contest with challenging problems. Test your coding skills and compete with peers for top positions.</p>
+                            <div class="event-details">
+                                <p class="mb-2"><small><i class="fas fa-calendar me-2 text-primary"></i>22 Dec 2024</small></p>
+                                <p class="mb-2"><small><i class="fas fa-clock me-2 text-primary"></i>10:00 AM - 1:00 PM</small></p>
+                                <p><small><i class="fas fa-map-marker me-2 text-primary"></i>Computer Lab 1</small></p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="registration.html" class="btn btn-primary btn-sm w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100 event-item" data-category="Technical" data-month="12">
+                        <div class="event-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Technical</span>
+                            <h5 class="card-title fw-bold">Project Expo</h5>
+                            <p class="card-text text-muted">Exhibit your semester projects and innovative ideas. Network with professionals and get recognition for your work.</p>
+                            <div class="event-details">
+                                <p class="mb-2"><small><i class="fas fa-calendar me-2 text-primary"></i>24 Dec 2024</small></p>
+                                <p class="mb-2"><small><i class="fas fa-clock me-2 text-primary"></i>10:00 AM - 4:00 PM</small></p>
+                                <p><small><i class="fas fa-map-marker me-2 text-primary"></i>Conference Hall</small></p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="registration.html" class="btn btn-primary btn-sm w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card event-card h-100 event-item" data-category="Cultural" data-month="12">
+                        <div class="event-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">Cultural</span>
+                            <h5 class="card-title fw-bold">Cultural Fest</h5>
+                            <p class="card-text text-muted">Celebrate diversity with music, dance, drama, and cultural performances. A spectacular showcase of talents and traditions.</p>
+                            <div class="event-details">
+                                <p class="mb-2"><small><i class="fas fa-calendar me-2 text-primary"></i>25-26 Dec 2024</small></p>
+                                <p class="mb-2"><small><i class="fas fa-clock me-2 text-primary"></i>4:00 PM - 9:00 PM</small></p>
+                                <p><small><i class="fas fa-map-marker me-2 text-primary"></i>College Ground</small></p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="registration.html" class="btn btn-primary btn-sm w-100">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="events.html" class="text-white-50 text-decoration-none">Events</a></li>
+                        <li><a href="gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li><a href="faq.html" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:events@college.edu" class="text-white-50 text-decoration-none">events@college.edu</a></li>
+                        <li><a href="tel:+911234567890" class="text-white-50 text-decoration-none">+91 123-456-7890</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Hours</h6>
+                    <p class="text-white-50 small mb-1">Mon - Fri: 10 AM - 6 PM</p>
+                    <p class="text-white-50 small">Sat - Sun: Closed</p>
+                </div>
+            </div>
+            <hr class="text-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 College Event Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

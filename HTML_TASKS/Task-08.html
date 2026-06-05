@@ -1,0 +1,54 @@
+<!--
+8. Saving User Preferences
+Scenario: Store preferred event type for returning users.
+Objective: Work with localStorage, sessionStorage, and deletion
+Task:
+• Save selected event type in localStorage
+• On reload, retrieve and pre-select it
+• Add a "Clear Preferences" button that clears both localStorage and sessionStorage
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-08</title>
+    <script>
+        function savePreference() {
+            let value =
+            document.getElementById("eventType").value;
+            localStorage.setItem("preferredEvent", value);
+            sessionStorage.setItem("currentEvent", value);
+            alert("Preference Saved");
+        }
+        function loadPreference() {
+            let saved =
+            localStorage.getItem("preferredEvent");
+            if (saved) {
+                document.getElementById("eventType").value = saved;
+            }
+        }
+        function clearPreference() {
+            localStorage.clear();
+            sessionStorage.clear();
+            alert("Preferences Cleared");
+        }
+        window.onload = loadPreference;
+    </script>
+</head>
+<body>
+    <h2>User Preferences</h2>
+    <select id="eventType" title="Event Type">
+        <option>Music</option>
+        <option>Sports</option>
+        <option>Art</option>
+    </select>
+    <br><br>
+    <button onclick="savePreference()">
+        Save Preference
+    </button>
+    <button onclick="clearPreference()">
+        Clear Preferences
+    </button>
+</body>
+</html>

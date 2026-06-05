@@ -1,0 +1,71 @@
+<!--
+Responsive Navigation Bar
+Objective
+Design a responsive navigation menu.
+Requirements
+1. Create a webpage containing:
+o Logo
+o Home
+o About
+o Services
+o Contact
+2. Desktop View
+o Menu items should appear horizontally.
+o Background color should be dark blue.
+3. Mobile View (768px and below)
+o Menu items should appear vertically.
+o Each menu item should occupy full width.
+Constraints
+• Use Flexbox.
+• Use Media Queries.
+• No Bootstrap.
+Expected Output
+Desktop:
+LOGO Home About Services Contact
+Mobile:
+LOGO
+Home
+About
+Services
+Contact
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h1>Home</h1>
+            <p>Welcome to our responsive navigation bar demo.</p>
+        </section>
+        <section id="about">
+            <h1>About</h1>
+            <p>This navigation bar is fully responsive using Flexbox and Media Queries.</p>
+        </section>
+        <section id="services">
+            <h1>Services</h1>
+            <p>We offer various web design and development services.</p>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Get in touch with us for more information.</p>
+        </section>
+    </main>
+</body>
+
+</html>

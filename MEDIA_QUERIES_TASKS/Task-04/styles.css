@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #e78dd8;
+    color: rgb(31, 201, 231);
+    padding: 1px;
+    text-align: center;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 200px;
+    background-color: #44df72;
+    padding: 1px;
+}
+.content {
+    flex: 1;
+    padding: 1px;
+    background-color:rgb(236, 177, 66)
+}
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        display: none;
+    }
+}

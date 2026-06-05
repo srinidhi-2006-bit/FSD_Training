@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - College Event Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-calendar-alt me-2"></i>Event Management
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Contact Us</h1>
+            <p class="lead">We'd love to hear from you. Get in touch with us!</p>
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card text-center p-4">
+                        <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                        <h6 class="fw-bold mb-2">Address</h6>
+                        <p class="text-muted small">
+                            ABC College Campus<br>
+                            123 Education Street<br>
+                            City, State 123456
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card text-center p-4">
+                        <i class="fas fa-phone-alt fa-3x text-success mb-3"></i>
+                        <h6 class="fw-bold mb-2">Phone</h6>
+                        <p class="text-muted small">
+                            <a href="tel:+911234567890" class="text-decoration-none text-muted">+91 123-456-7890</a><br>
+                            <a href="tel:+919876543210" class="text-decoration-none text-muted">+91 98765-43210</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card text-center p-4">
+                        <i class="fas fa-envelope fa-3x text-danger mb-3"></i>
+                        <h6 class="fw-bold mb-2">Email</h6>
+                        <p class="text-muted small">
+                            <a href="mailto:events@college.edu" class="text-decoration-none text-muted">events@college.edu</a><br>
+                            <a href="mailto:support@college.edu" class="text-decoration-none text-muted">support@college.edu</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-card text-center p-4">
+                        <i class="fas fa-clock fa-3x text-warning mb-3"></i>
+                        <h6 class="fw-bold mb-2">Hours</h6>
+                        <p class="text-muted small">
+                            Mon - Fri: 10 AM - 6 PM<br>
+                            Sat - Sun: Closed<br>
+                            Holidays: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Details -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-paper-plane me-2"></i>Send us a Message</h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Contact Form Success Alert -->
+                            <div id="contactSuccessAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>Message Sent!</strong> We'll get back to you soon.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+
+                            <form id="contactForm" novalidate>
+                                <div class="mb-3">
+                                    <label for="contactName" class="form-label fw-bold">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="contactName" placeholder="Your full name" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="contactEmail" class="form-label fw-bold">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="your@email.com" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="contactPhone" class="form-label fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control" id="contactPhone" placeholder="Your contact number">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="contactSubject" class="form-label fw-bold">Subject <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="contactSubject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="Event Registration">Event Registration Query</option>
+                                        <option value="Event Feedback">Event Feedback</option>
+                                        <option value="Technical Issue">Technical Issue</option>
+                                        <option value="Suggestion">Suggestion</option>
+                                        <option value="Partnership">Partnership Inquiry</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label fw-bold">Message <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your message here..." required></textarea>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="contactTerms" required>
+                                    <label class="form-check-label" for="contactTerms">
+                                        I agree to be contacted for follow-up <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg fw-bold">
+                                        <i class="fas fa-send me-2"></i>Send Message
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-secondary">
+                                        <i class="fas fa-redo me-2"></i>Clear
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Coordinators -->
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-users me-2"></i>Event Coordinators</h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Coordinator 1 -->
+                            <div class="coordinator-card p-3 mb-3 border rounded">
+                                <div class="d-flex align-items-start">
+                                    <div class="coordinator-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; flex-shrink: 0;">
+                                        <i class="fas fa-user-tie fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Dr. Rajesh Kumar</h6>
+                                        <p class="text-muted small mb-2">Event Head</p>
+                                        <p class="small mb-1">
+                                            <i class="fas fa-envelope text-primary me-2"></i>
+                                            <a href="mailto:rajesh@college.edu" class="text-decoration-none">rajesh@college.edu</a>
+                                        </p>
+                                        <p class="small mb-0">
+                                            <i class="fas fa-phone text-primary me-2"></i>
+                                            <a href="tel:+911111111111" class="text-decoration-none">+91 11111-11111</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Coordinator 2 -->
+                            <div class="coordinator-card p-3 mb-3 border rounded">
+                                <div class="d-flex align-items-start">
+                                    <div class="coordinator-avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; flex-shrink: 0;">
+                                        <i class="fas fa-user-tie fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Ms. Priya Sharma</h6>
+                                        <p class="text-muted small mb-2">Coordinator (Technical Events)</p>
+                                        <p class="small mb-1">
+                                            <i class="fas fa-envelope text-primary me-2"></i>
+                                            <a href="mailto:priya@college.edu" class="text-decoration-none">priya@college.edu</a>
+                                        </p>
+                                        <p class="small mb-0">
+                                            <i class="fas fa-phone text-primary me-2"></i>
+                                            <a href="tel:+912222222222" class="text-decoration-none">+91 22222-22222</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Coordinator 3 -->
+                            <div class="coordinator-card p-3 mb-3 border rounded">
+                                <div class="d-flex align-items-start">
+                                    <div class="coordinator-avatar bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; flex-shrink: 0;">
+                                        <i class="fas fa-user-tie fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Mr. Arjun Singh</h6>
+                                        <p class="text-muted small mb-2">Coordinator (Cultural Events)</p>
+                                        <p class="small mb-1">
+                                            <i class="fas fa-envelope text-primary me-2"></i>
+                                            <a href="mailto:arjun@college.edu" class="text-decoration-none">arjun@college.edu</a>
+                                        </p>
+                                        <p class="small mb-0">
+                                            <i class="fas fa-phone text-primary me-2"></i>
+                                            <a href="tel:+913333333333" class="text-decoration-none">+91 33333-33333</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Coordinator 4 -->
+                            <div class="coordinator-card p-3 border rounded">
+                                <div class="d-flex align-items-start">
+                                    <div class="coordinator-avatar bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px; flex-shrink: 0;">
+                                        <i class="fas fa-user-tie fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Ms. Sneha Patel</h6>
+                                        <p class="text-muted small mb-2">Coordinator (Sports & Others)</p>
+                                        <p class="small mb-1">
+                                            <i class="fas fa-envelope text-primary me-2"></i>
+                                            <a href="mailto:sneha@college.edu" class="text-decoration-none">sneha@college.edu</a>
+                                        </p>
+                                        <p class="small mb-0">
+                                            <i class="fas fa-phone text-primary me-2"></i>
+                                            <a href="tel:+914444444444" class="text-decoration-none">+91 44444-44444</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="fw-bold text-center mb-5">Follow Us On Social Media</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-lg-2">
+                    <a href="#" class="social-link d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 rounded border">
+                        <i class="fab fa-facebook-f fa-3x text-primary mb-2"></i>
+                        <span class="fw-bold text-dark">Facebook</span>
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <a href="#" class="social-link d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 rounded border">
+                        <i class="fab fa-twitter fa-3x text-info mb-2"></i>
+                        <span class="fw-bold text-dark">Twitter</span>
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <a href="#" class="social-link d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 rounded border">
+                        <i class="fab fa-instagram fa-3x text-danger mb-2"></i>
+                        <span class="fw-bold text-dark">Instagram</span>
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <a href="#" class="social-link d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 rounded border">
+                        <i class="fab fa-linkedin-in fa-3x text-secondary mb-2"></i>
+                        <span class="fw-bold text-dark">LinkedIn</span>
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <a href="#" class="social-link d-flex flex-column align-items-center justify-content-center text-decoration-none p-4 rounded border">
+                        <i class="fab fa-youtube fa-3x text-danger mb-2"></i>
+                        <span class="fw-bold text-dark">YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="fw-bold text-center mb-4">Find Us Here</h3>
+            <div class="map-container rounded overflow-hidden shadow" style="height: 400px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                <div class="text-center">
+                    <i class="fas fa-map-location-dot fa-5x text-muted mb-3" style="display: block;"></i>
+                    <p class="text-muted">Interactive map would be embedded here</p>
+                    <p class="text-muted small">ABC College Campus, 123 Education Street, City, State 123456</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="events.html" class="text-white-50 text-decoration-none">Events</a></li>
+                        <li><a href="gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li><a href="faq.html" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:events@college.edu" class="text-white-50 text-decoration-none">events@college.edu</a></li>
+                        <li><a href="tel:+911234567890" class="text-white-50 text-decoration-none">+91 123-456-7890</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Hours</h6>
+                    <p class="text-white-50 small mb-1">Mon - Fri: 10 AM - 6 PM</p>
+                    <p class="text-white-50 small">Sat - Sun: Closed</p>
+                </div>
+            </div>
+            <hr class="text-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 College Event Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

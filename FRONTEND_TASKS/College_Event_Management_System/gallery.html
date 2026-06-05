@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - College Event Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-calendar-alt me-2"></i>Event Management
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-2">Event Gallery</h1>
+            <p class="lead">Relive the memorable moments from our past events</p>
+        </div>
+    </div>
+
+    <!-- Gallery Filter -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="filter-buttons text-center mb-4">
+                <button class="btn btn-outline-primary me-2 mb-2 gallery-filter active" data-filter="all">All Events</button>
+                <button class="btn btn-outline-primary me-2 mb-2 gallery-filter" data-filter="technical">Technical</button>
+                <button class="btn btn-outline-primary me-2 mb-2 gallery-filter" data-filter="cultural">Cultural</button>
+                <button class="btn btn-outline-primary mb-2 gallery-filter" data-filter="sports">Sports</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="card gallery-item mb-4" data-category="technical">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Technical Quiz 2024</h6>
+                                <p class="text-white-50 small mb-0">Students participating in technical quiz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Technical Quiz</h6>
+                        <p class="text-muted small mb-0">Participants showcasing their technical knowledge</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="card gallery-item mb-4" data-category="technical">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Hackathon 2024</h6>
+                                <p class="text-white-50 small mb-0">Teams collaborating on innovative projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Hackathon Challenge</h6>
+                        <p class="text-muted small mb-0">24-hour coding competition winners</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="card gallery-item mb-4" data-category="technical">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Project Expo</h6>
+                                <p class="text-white-50 small mb-0">Impressive student projects on display</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Project Expo 2024</h6>
+                        <p class="text-muted small mb-0">Semester projects showcased by students</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="card gallery-item mb-4" data-category="technical">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Poster Presentation</h6>
+                                <p class="text-white-50 small mb-0">Research posters and presentations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Poster Session</h6>
+                        <p class="text-muted small mb-0">Research work presented by students</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="card gallery-item mb-4" data-category="cultural">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Cultural Fest</h6>
+                                <p class="text-white-50 small mb-0">Traditional dance and music performances</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Cultural Fest Dance</h6>
+                        <p class="text-muted small mb-0">Traditional and contemporary dance performances</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="card gallery-item mb-4" data-category="cultural">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Music Night</h6>
+                                <p class="text-white-50 small mb-0">Live performances by student bands</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Cultural Music Night</h6>
+                        <p class="text-muted small mb-0">Student bands performing live music</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="card gallery-item mb-4" data-category="cultural">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffa751 0%, #ffe259 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Fashion Show</h6>
+                                <p class="text-white-50 small mb-0">Student fashion showcase event</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Fashion Show 2024</h6>
+                        <p class="text-muted small mb-0">Creative designs and performances</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="card gallery-item mb-4" data-category="sports">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #52c234 0%, #061700 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Sports Day</h6>
+                                <p class="text-white-50 small mb-0">Athletic competitions and team events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Annual Sports Day</h6>
+                        <p class="text-muted small mb-0">Track and field competitions</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="card gallery-item mb-4" data-category="sports">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #eb3b5a 0%, #fc5c65 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Cricket Match</h6>
+                                <p class="text-white-50 small mb-0">Inter-departmental cricket tournament</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Cricket Tournament</h6>
+                        <p class="text-muted small mb-0">Inter-department cricket matches</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="card gallery-item mb-4" data-category="sports">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Basketball Game</h6>
+                                <p class="text-white-50 small mb-0">Basketball championship finals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Basketball Finals</h6>
+                        <p class="text-muted small mb-0">Basketball championship matches</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="card gallery-item mb-4" data-category="sports">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f1a208 0%, #ffa500 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Volleyball</h6>
+                                <p class="text-white-50 small mb-0">Volleyball tournament highlights</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Volleyball Tournament</h6>
+                        <p class="text-muted small mb-0">Competitive volleyball matches</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="card gallery-item mb-4" data-category="sports">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h6 class="text-white mb-2">Marathon</h6>
+                                <p class="text-white-50 small mb-0">Annual college marathon event</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">College Marathon</h6>
+                        <p class="text-muted small mb-0">Annual 10K marathon run</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="fw-bold mb-5 text-center">Gallery Statistics</h3>
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="stat-card p-4">
+                        <i class="fas fa-image fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">150+</h4>
+                        <p class="text-muted">Photos</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="stat-card p-4">
+                        <i class="fas fa-video fa-3x text-success mb-3"></i>
+                        <h4 class="fw-bold">25+</h4>
+                        <p class="text-muted">Videos</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="stat-card p-4">
+                        <i class="fas fa-calendar fa-3x text-danger mb-3"></i>
+                        <h4 class="fw-bold">50+</h4>
+                        <p class="text-muted">Events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="events.html" class="text-white-50 text-decoration-none">Events</a></li>
+                        <li><a href="gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li><a href="faq.html" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:events@college.edu" class="text-white-50 text-decoration-none">events@college.edu</a></li>
+                        <li><a href="tel:+911234567890" class="text-white-50 text-decoration-none">+91 123-456-7890</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold mb-3">Hours</h6>
+                    <p class="text-white-50 small mb-1">Mon - Fri: 10 AM - 6 PM</p>
+                    <p class="text-white-50 small">Sat - Sun: Closed</p>
+                </div>
+            </div>
+            <hr class="text-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 College Event Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
