@@ -1,0 +1,569 @@
+/* ===========================
+   Global Styles
+   =========================== */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===========================
+   Navigation Bar
+   =========================== */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    position: relative;
+    margin: 0 10px;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    z-index: 0;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-section .btn {
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   About Section
+   =========================== */
+#about {
+    background-color: var(--light-bg);
+}
+
+.card {
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-title i {
+    font-size: 1.5rem;
+}
+
+.list-unstyled li {
+    transition: var(--transition);
+    padding-left: 10px;
+}
+
+.list-unstyled li:hover {
+    padding-left: 15px;
+}
+
+/* ===========================
+   Skills Section
+   =========================== */
+#skills {
+    background-color: white;
+}
+
+.progress {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.card:has(.progress-bar):hover .progress-bar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card {
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.skill-card i {
+    transition: var(--transition);
+}
+
+.skill-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ===========================
+   Projects Section
+   =========================== */
+#projects {
+    background-color: var(--light-bg);
+}
+
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.badge {
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Achievements Section
+   =========================== */
+#achievements {
+    background-color: white;
+}
+
+.achievement-item {
+    transition: var(--transition);
+    padding-left: 10px;
+}
+
+.achievement-item:hover {
+    padding-left: 15px;
+    background-color: var(--light-bg);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: -10px -15px 15px -15px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 5px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: #dee2e6;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.timeline-item:hover .timeline-marker {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* ===========================
+   Contact Section
+   =========================== */
+#contact {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+}
+
+.form-label {
+    color: white;
+    margin-bottom: 8px;
+}
+
+#contact .btn {
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+#contact .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+}
+
+#contact .btn-outline-secondary:hover {
+    transform: translateY(-3px);
+}
+
+.social-links .btn {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links .btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* ===========================
+   Modal Styles
+   =========================== */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    border-radius: 10px 10px 0 0;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    margin-top: 5rem;
+}
+
+footer p {
+    margin: 0;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* ===========================
+   Animations
+   =========================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+}
+
+/* ===========================
+   Responsive Styles
+   =========================== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    .display-4 {
+        font-size: 1.75rem;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+    }
+
+    .nav-link {
+        margin: 0 5px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-marker {
+        left: -30px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    }
+
+    .timeline-item::before {
+        left: -15px;
+    }
+
+    .contact-section .row {
+        flex-direction: column-reverse;
+    }
+
+    .form-control,
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-3 {
+        font-size: 1.5rem;
+    }
+
+    .display-4 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section::before,
+    .hero-section::after {
+        display: none;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    h5.card-title {
+        font-size: 1rem;
+    }
+
+    .progress {
+        height: 6px;
+    }
+
+    .skill-card i {
+        font-size: 2rem !important;
+    }
+
+    .btn-sm {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .social-links .btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+
+    #contact .row {
+        flex-direction: column-reverse;
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+    .navbar,
+    footer,
+    #contact .btn,
+    .project-card .btn {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
