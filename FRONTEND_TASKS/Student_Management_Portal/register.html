@@ -22,13 +22,55 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#login">Login</button>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="login" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Student Login</h5>
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="loginAlert"></div>
+                    <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email"
+                                   class="form-control"
+                                   id="loginEmail"
+                                   placeholder="Enter Email"
+                                   required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password"
+                                   class="form-control"
+                                   id="loginPassword"
+                                   placeholder="Enter Password"
+                                   required>
+                        </div>
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            Login
+                        </button>
+                    </form>
+                    <p class="mt-3 text-center">
+                        New User?
+                        <a href="register.html">Register Here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Main Content -->
     <div class="container my-5">
         <div class="row justify-content-center">

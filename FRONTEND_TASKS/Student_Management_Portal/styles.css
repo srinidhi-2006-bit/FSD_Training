@@ -1,104 +1,303 @@
-/* Simple CSS Styles */
+/* =========================
+   GLOBAL STYLES
+========================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    color:#333;
+    min-height:100vh;
+    line-height:1.6;
 }
 
-/* Navbar */
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:linear-gradient(90deg,#0f172a,#1e3a8a) !important;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    padding:10px 0;
 }
 
-/* Hero Section */
-.hero {
-    min-height: 300px;
-    display: flex;
-    align-items: center;
+.navbar-brand{
+    font-weight:700;
+    font-size:1.4rem;
+    color:white !important;
 }
 
-/* Cards */
-.card {
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+.navbar-brand img{
+    border-radius:50%;
+    border:3px solid white;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.nav-link{
+    color:white !important;
+    font-weight:500;
+    transition:0.3s;
 }
 
-/* Forms */
-.form-label {
-    font-weight: 500;
+.nav-link:hover{
+    color:#60a5fa !important;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.bg-primary{
+    background:linear-gradient(135deg,#2563eb,#1e40af) !important;
+}
+
+.hero,
+section.bg-primary{
+    position:relative;
+    overflow:hidden;
+}
+
+.display-4{
+    font-weight:700;
+}
+
+.lead{
+    font-size:1.2rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    background:white;
+    transition:all 0.4s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.card-title{
+    color:#1e3a8a;
+    font-weight:700;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    border-radius:30px;
+    padding:10px 25px;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    border:none;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,99,235,0.4);
+}
+
+.btn-danger{
+    border:none;
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+.btn-danger:hover{
+    transform:translateY(-3px);
+}
+
+.btn-light{
+    font-weight:600;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form-label{
+    font-weight:600;
+    color:#1e293b;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    padding:12px;
+    border:1px solid #d1d5db;
 }
 
 .form-control:focus,
-.form-select:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+.form-select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 0.25rem rgba(37,99,235,0.2);
 }
 
-/* Buttons */
-.btn {
-    font-weight: 500;
-    border-radius: 4px;
+/* =========================
+   DASHBOARD
+========================= */
+
+.table{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
 }
 
-/* Table */
-.table-hover tbody tr:hover {
-    background-color: #f5f5f5;
+.table-dark{
+    background:#1e3a8a !important;
 }
 
-.table-dark {
-    background-color: #212529;
+.table-hover tbody tr:hover{
+    background:#eef4ff;
 }
 
-/* Badges */
-.badge {
-    padding: 5px 10px;
-    font-size: 0.85rem;
+.badge{
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:0.8rem;
 }
 
-/* Footer */
-footer {
-    margin-top: auto;
+/* Dashboard Statistics Cards */
+
+.card h2{
+    font-weight:700;
+    color:#2563eb;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero {
-        min-height: 200px;
+.card h6{
+    color:#64748b;
+}
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.rounded-circle{
+    border:5px solid #2563eb;
+    box-shadow:0 5px 20px rgba(37,99,235,0.3);
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.bg-light{
+    background:linear-gradient(135deg,#dbeafe,#eff6ff) !important;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-content{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.modal-header{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:linear-gradient(90deg,#0f172a,#1e3a8a) !important;
+}
+
+footer a{
+    text-decoration:none;
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#60a5fa !important;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.card,
+.btn,
+.form-control,
+.form-select{
+    transition:all 0.3s ease;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight:700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:1rem;
     }
 
-    .card {
-        margin-bottom: 15px;
+    .display-4{
+        font-size:2rem;
     }
 
-    .table-responsive {
-        font-size: 0.9rem;
+    .card img{
+        height:auto;
+    }
+
+    form{
+        padding:20px;
     }
 }
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 1.2rem;
+@media(max-width:576px){
+
+    .btn{
+        width:100%;
+        margin-bottom:10px;
     }
 
-    .display-4 {
-        font-size: 2rem;
+    .display-4{
+        font-size:1.7rem;
     }
 
-    .btn {
-        width: 100%;
-        margin-bottom: 10px;
+    .navbar-brand img{
+        height:60px !important;
+        width:60px !important;
     }
 }
