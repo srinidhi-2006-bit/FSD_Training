@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    overflow-x:hidden;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    background:linear-gradient(90deg,#0f172a,#1e3a8a)!important;
+    padding:12px 0;
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+
+.navbar-brand{
+    color:white!important;
+    font-weight:700;
+    font-size:1.4rem;
+}
+
+.navbar-brand img{
+    border-radius:50%;
+    border:3px solid white;
+    transition:0.4s;
+}
+
+.navbar-brand img:hover{
+    transform:rotate(10deg) scale(1.05);
+}
+
+.nav-link{
+    color:white!important;
+    font-weight:500;
+    margin-left:10px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#60a5fa!important;
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.carousel-item img{
+    height:700px;
+    object-fit:cover;
+}
+
+.container.text-center h1{
+    font-size:3rem;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.container.text-center h4{
+    color:#2563eb;
+    margin-top:15px;
+}
+
+.container.text-center p{
+    font-size:1.1rem;
+    color:#555;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+    border:none;
+    border-radius:30px;
+    padding:10px 25px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(37,99,235,0.4);
+}
+
+.btn-success{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.btn-success:hover{
+    transform:translateY(-4px);
+}
+
+.btn-danger{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+/* ==========================
+   SECTION TITLES
+========================== */
+
+h1,h2,h3,h4,h5{
+    font-weight:700;
+}
+
+h2{
+    color:#1e3a8a;
+    margin-bottom:25px;
+    position:relative;
+}
+
+h2{
+    color:#1e3a8a;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+/* ==========================
+   COURSE CARDS
+========================== */
+
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    background:white;
+    transition:0.4s;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card img,
+.card-img-top{
+    height:220px;
+    width:100%;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.card-body h5{
+    color:#1e3a8a;
+    font-weight:700;
+}
+
+.card-body p{
+    margin-bottom:8px;
+}
+
+/* ==========================
+   ABOUT PAGE
+========================== */
+
+.card.p-3{
+    text-align:center;
+    padding:25px!important;
+}
+
+.card.p-3 h5{
+    color:#2563eb;
+}
+
+.card.p-3:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.card.p-3:hover h5{
+    color:white;
+}
+
+/* ==========================
+   CONTACT PAGE
+========================== */
+
+form{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-label{
+    font-weight:600;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    padding:12px;
+    border:1px solid #d1d5db;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 0.25rem rgba(37,99,235,.2);
+}
+
+/* ==========================
+   GOOGLE MAP BOX
+========================== */
+
+.border.p-5{
+    background:#eef4ff;
+    border-radius:15px!important;
+    font-weight:600;
+    color:#2563eb;
+}
+
+/* ==========================
+   REGISTER PAGE
+========================== */
+
+.alert-success{
+    border-radius:15px;
+    font-weight:600;
+}
+
+.form-check-label{
+    margin-left:5px;
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.card.p-3 p{
+    font-style:italic;
+}
+
+.card.p-3 h6{
+    color:#2563eb;
+    margin-top:10px;
+}
+
+/* ==========================
+   LOGIN MODAL
+========================== */
+
+.modal-content{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.modal-header{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+}
+
+.modal-body{
+    padding:30px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:linear-gradient(90deg,#0f172a,#1e3a8a)!important;
+    color:white;
+    font-size:15px;
+    padding:30px!important;
+    margin-top:50px;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+.card,
+.btn,
+.form-control,
+.form-select,
+.nav-link{
+    transition:all .3s ease;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card{
+    animation:fadeInUp .8s ease;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .carousel-item img{
+        height:450px;
+    }
+
+    .container.text-center h1{
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .carousel-item img{
+        height:350px;
+    }
+
+    .container.text-center h1{
+        font-size:2rem;
+    }
+
+    .navbar-brand{
+        font-size:1rem;
+    }
+
+    .navbar-brand img{
+        width:70px!important;
+        height:70px!important;
+    }
+
+    .card img{
+        height:200px;
+    }
+}
+
+@media(max-width:576px){
+
+    .carousel-item img{
+        height:250px;
+    }
+
+    .container.text-center h1{
+        font-size:1.6rem;
+    }
+
+    .btn{
+        width:100%;
+        margin-top:10px;
+    }
+
+    form{
+        padding:20px;
+    }
+}
