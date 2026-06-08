@@ -22,5 +22,22 @@
             <button type="submit">Login</button>
         </form>
     </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let storedUser = JSON.parse(localStorage.getItem("user"));
+            if(storedUser && username === storedUser.username && password === storedUser.password)
+            {
+                localStorage.setItem("loggedInUser", username);
+                window.location.href = "dashboard.html";
+            }
+            else
+            {
+                alert("Invalid Username or Password");
+            }
+        });
+    </script>
 </body> 
 </html>

@@ -17,5 +17,11 @@
         <h1>Logged out successfully</h1>
         <a href="login.html">Click here to login again</a>
     </div>
+    <script>
+        localStorage.removeItem("loggedInUser");
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 2000);
+    </script>
 </body>
 </html>

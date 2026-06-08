@@ -27,5 +27,24 @@
             <button type="submit">Add Student</button>
         </form>
     </div>
+    <script>
+        document.getElementById("addStudentForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            let rollNo = document.getElementById("rollNo").value;
+            let name = document.getElementById("name").value;
+            let branch = document.getElementById("branch").value;
+            let cgpa = document.getElementById("cgpa").value;
+            let student = {
+                rollNo,
+                name,
+                branch,
+                cgpa
+            };
+            let students = JSON.parse(localStorage.getItem("students"));
+            students.push(student);
+            localStorage.setItem("students", JSON.stringify(students));
+            window.location.href = "view_students.html";
+        });
+    </script>
 </body>
 </html>

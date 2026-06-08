@@ -15,36 +15,44 @@
     </nav>
     <div class="content">
         <h1>View Students in Student Management System</h1>
-        <table>
-            <tr>
-                <th>Roll No</th>
-                <th>Name</th>
-                <th>Branch</th>
-                <th>CGPA</th>
-                <th>Actions</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Nidhi</td>
-                <td>Computer Science</td>
-                <td>9.3</td>
-                <td><a href="edit_students.html">Edit</a> <a href="delete_students.html">Delete</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Rahul</td>
-                <td>Mechanical Engineering</td>
-                <td>8.5</td>
-                <td><a href="edit_students.html">Edit</a> <a href="delete_students.html">Delete    </a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Priya</td>
-                <td>Electrical Engineering</td>
-                <td>8.9</td>
-                <td><a href="edit_students.html">Edit</a> <a href="delete_students.html">Delete</a></td>
-            </tr>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
         </table>
     </div>
+    <script>
+        let students = JSON.parse(localStorage.getItem("students"));
+        let tbody = document.getElementById("studentTableBody");
+        function deleteStudent(index) {
+            students.splice(index, 1);
+            localStorage.setItem("students", JSON.stringify(students));
+            location.reload();
+        }
+        function editStudent(index) {
+            localStorage.setItem("editIndex", index);
+            window.location.href = "edit_students.html";
+        }
+        students.forEach((student,index) => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${student.rollNo}</td>
+                    <td>${student.name}</td>
+                    <td>${student.branch}</td>
+                    <td>${student.cgpa}</td>
+                    <td>
+                        <button onclick="editStudent(${index})">Edit</button> 
+                        <button onclick="deleteStudent(${index})">Delete</button>
+                    </td>
+                </tr>`;
+        });
+    </script>
 </body>
 </html>

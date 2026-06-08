@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Student Management System</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <nav>
@@ -18,5 +19,13 @@
         <a href="add_students.html">Add Students</a><br><br>
         <a href="view_students.html">View Students</a><br><br>
     </div>
+    <script>
+        let user=localStorage.getItem("loggedInUser");
+        if(!user)
+        {
+            window.location.href ="login.html";
+        }
+        document.getElementById("message").innerHTML += `<h2>Welcome ${user}</h2>`;
+    </script>
 </body>
 </html>
