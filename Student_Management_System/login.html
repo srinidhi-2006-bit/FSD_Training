@@ -13,12 +13,12 @@
         <a href="register.html" id="register">Register</a>
     </nav>
     <div class="content">
-        <h1>Login to Student Management System</h1>
+        <h1>Login</h1>
         <form id="loginForm">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="username" name="username"><br><br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="password" id="password" name="password"><br><br>
             <button type="submit">Login</button>
         </form>
     </div>
@@ -28,6 +28,16 @@
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
             let storedUser = JSON.parse(localStorage.getItem("user"));
+            let usernameRegex = /^[A-Za-z0-9_]{3,}$/;
+            let passwordRegex = /^.{6,}$/;
+            if(!usernameRegex.test(username)){
+                alert("Username must contain at least 3 characters");
+                return;
+            }
+            if(password.match(passwordRegex) == null){
+                alert("Password must be at least 6 characters");
+                return;
+            }
             if(storedUser && username === storedUser.username && password === storedUser.password)
             {
                 localStorage.setItem("loggedInUser", username);

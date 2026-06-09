@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Student - Student Management System</title>
+    <title>Edit Students</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,15 +15,15 @@
     </nav>
     <div class="content">
         <h1>Edit Student</h1>
-        <form id="editStudentForm">
+        <form id="editStudentForm" action="view_students.html" method="get">
             <label for="rollNo">Roll No:</label>
-            <input type="text" id="rollNo" name="rollNo" value="" required><br><br>
+            <input type="text" id="rollNo" name="rollNo" value=""><br><br>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="" required><br><br>
+            <input type="text" id="name" name="name" value=""><br><br>
             <label for="branch">Branch:</label>
-            <input type="text" id="branch" name="branch" value="" required><br><br>
+            <input type="text" id="branch" name="branch" value=""><br><br>
             <label for="cgpa">CGPA:</label>
-            <input type="number" step="0.01" id="cgpa" name="cgpa" value="" required><br><br>
+            <input type="number" step="0.01" id="cgpa" name="cgpa" value=""><br><br>
             <button type="submit">Update Student</button>
         </form>
     </div>
@@ -38,11 +38,35 @@
         }
         document.getElementById("editStudentForm").addEventListener("submit", function(e){
             e.preventDefault();
+            let rollNo = document.getElementById("rollNo").value;
+            let name = document.getElementById("name").value;
+            let branch = document.getElementById("branch").value;
+            let cgpa = document.getElementById("cgpa").value;
+            let rollRegex = /^[0-9]+$/;/*digits only*/
+            let nameRegex = /^[A-Za-z ]+$/;/*letters and spaces only*/
+            let branchRegex = /^[A-Za-z ()]+$/;/*letters,(), and spaces only*/
+            let cgpaRegex = /^[0-9]+(\.[0-9]+)?$/;/*numbers with optional decimal*/
+            if(!rollRegex.test(rollNo)){
+                alert("Roll Number should contain only digits");
+                return;
+            }
+            if(name.match(nameRegex) == null){
+                alert("Name should contain only letters");
+                return;
+            }
+            if(!branchRegex.test(branch)){
+                alert("Branch should contain only letters");
+                return;
+            }
+            if(cgpa.match(cgpaRegex) == null){
+                alert("Enter a valid CGPA");
+                return;
+            }
             students[index] = {
-                rollNo: document.getElementById("rollNo").value,
-                name: document.getElementById("name").value,
-                branch: document.getElementById("branch").value,
-                cgpa: document.getElementById("cgpa").value
+                rollNo: rollNo,
+                name: name,
+                branch: branch,
+                cgpa: cgpa
             };
             localStorage.setItem("students", JSON.stringify(students));
             window.location.href = "view_students.html";

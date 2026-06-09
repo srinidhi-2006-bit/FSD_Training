@@ -13,16 +13,16 @@
         <a href="register.html" id="register">Register</a>
     </nav>
     <div class="content">
-        <h1>Register for Student Management System</h1>
+        <h1>Register</h1>
         <form id="registerForm">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="username" name="username"><br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email"><br><br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="password" id="password" name="password"><br><br>
             <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+            <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
             <button type="submit">Register</button>
             <h4>Already have an account? <a href="login.html">Login here</a></h4>
         </form>
@@ -34,6 +34,21 @@
             let email=document.getElementById("email").value;
             let password=document.getElementById("password").value;
             let confirmPassword=document.getElementById("confirmPassword").value;
+            let usernameRegex = /^[A-Za-z0-9_]{3,}$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let passwordRegex = /^.{6,}$/;
+            if(!usernameRegex.test(username)){
+                alert("Username must contain at least 3 characters");
+                return;
+            }
+            if(email.match(emailRegex) == null){
+                alert("Enter a valid Email");
+                return;
+            }
+            if(!passwordRegex.test(password)){
+                alert("Password must be at least 6 characters");
+                return;
+            }
             if(password!==confirmPassword)
             {
                 alert("Passwords do not match");
