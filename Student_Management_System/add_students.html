@@ -14,8 +14,8 @@
         <a href="logout.html" id="logout">Logout</a>
     </nav>
     <div class="content">
-        <h1>Add Student to Student Management System</h1>
-        <form id="addStudentForm" action="view_students.html">
+        <h1>Add Student</h1>
+        <form id="addStudentForm">
             <label for="rollNo">Roll No:</label>
             <input type="text" id="rollNo" name="rollNo" required><br><br>
             <label for="name">Name:</label>
@@ -30,20 +30,20 @@
     <script>
         document.getElementById("addStudentForm").addEventListener("submit", function(e){
             e.preventDefault();
-            let rollNo = document.getElementById("rollNo").value;
-            let name = document.getElementById("name").value;
-            let branch = document.getElementById("branch").value;
-            let cgpa = document.getElementById("cgpa").value;
-            let student = {
+            let rollNo=document.getElementById("rollNo").value;
+            let name=document.getElementById("name").value;
+            let branch=document.getElementById("branch").value;
+            let cgpa=document.getElementById("cgpa").value;
+            let student={
                 rollNo,
                 name,
                 branch,
                 cgpa
             };
-            let students = JSON.parse(localStorage.getItem("students"));
+            let students=JSON.parse(localStorage.getItem("students"));
             students.push(student);
-            localStorage.setItem("students", JSON.stringify(students));
-            window.location.href = "view_students.html";
+            localStorage.setItem("students",JSON.stringify(students));
+            window.location.href="view_students.html";
         });
     </script>
 </body>
