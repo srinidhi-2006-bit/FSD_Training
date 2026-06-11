@@ -1,13 +1,17 @@
-/*pyramid of dome=> as depth increases it becomes call back hell*/
+/*
+pyramid of dome is also called as call back hell
+as the depth of the pyramid increases it becomes call back hell
+to resolve the issue of call back hell we use promises
+*/
 function fetchUserName(userId, callback) {
     setTimeout(() => {
-        console.log("Fetching username...");
+        console.log("Fetching username");
         callback("Srinidhi");
     }, 1000);
 }
 function fetchUserDetails(username, callback) {
     setTimeout(() => {
-        console.log("Fetching user details...");
+        console.log("Fetching user details");
         callback({
             username: username,
             age: 18,
@@ -27,8 +31,8 @@ fetchUserName(1, (username) => {
 
 /*
 output:
-Fetching username...
-Fetching user details...
+Fetching username
+Fetching user details
 User Details:
 { username: 'Srinidhi', age: 18, city: 'Hyderabad' }
 */
