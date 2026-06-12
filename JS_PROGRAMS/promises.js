@@ -1,4 +1,5 @@
-/*promises resolve the issue of callback hell*/
+/*promises resolve the issue of callback
+*/
 function fetchUserName(userId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
