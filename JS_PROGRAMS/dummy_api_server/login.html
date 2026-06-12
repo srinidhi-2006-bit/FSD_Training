@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p>
+        Don't have an account?
+        <a href="register.html">Register Here</a>
+    </p>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(e){
+            e.preventDefault();
+            let username =document.getElementById("username").value;
+            let password =document.getElementById("password").value;
+            let res = await fetch("http://localhost:3000/users");
+            let users = await res.json();
+            if(users.some(s=>s.username==username && s.password==password))
+            {
+                alert("Login Successful");
+                window.location.href="dashboard.html";
+            }
+            else
+            {
+                alert("Invalid Username or Password");
+            }
+        });
+    </script>
+</body>
+</html>
+
+

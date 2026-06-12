@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "username": "nidhi",
+      "email": "nidhi@gmail.com",
+      "password": "nidhi",
+      "id": "GSHozRfZGMI"
+    },
+    {
+      "username": "sita",
+      "email": "sita@gmail.com",
+      "password": "sita",
+      "id": "cEvu1SAkADM"
+    },
+    {
+      "username": "ram",
+      "email": "ram@gmail.com",
+      "password": "ram",
+      "id": "XjTquR-Q1Nc"
+    },
+    {
+      "username": "shruthi",
+      "email": "shruthi@gmail.com",
+      "password": "shruthi",
+      "id": "iqZ8M-d_LNI"
+    },
+    {
+      "username": "Shru",
+      "email": "shru@gmail.com",
+      "password": "sry",
+      "id": "o02_PwtrHdg"
+    },
+    {
+      "username": "ramu",
+      "email": "ramu@gmail.com",
+      "password": "ramu",
+      "id": "LciT5j8h7Po"
+    },
+    {
+      "username": "mera",
+      "email": "mera@gmail.com",
+      "password": "mera",
+      "id": "qQ680nUNmD8"
+    },
+    {
+      "username": "ravali",
+      "email": "ravali@gmail.com",
+      "password": "ravali",
+      "id": "pkytfAQ1D2w"
+    },
+    {
+      "username": "srinidhi",
+      "email": "srinidhi@gmail.com",
+      "password": "srinidhi",
+      "id": "pHkEs7EovKE"
+    },
+    {
+      "username": "suresh",
+      "email": "suresh@gmail.com",
+      "password": "suresh",
+      "id": "D2PAOgx17Xg"
+    },
+    {
+      "username": "abc",
+      "email": "abc@gmail.com",
+      "password": "abc",
+      "id": "ILN0k2u-jwg"
+    },
+    {
+      "username": "ramesh",
+      "email": "ramesh@gmail.com",
+      "password": "ramesh",
+      "id": "SyV48knqmX0"
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": "HM7hAwz1mb0"
+    }
+  ],
+  "students": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
