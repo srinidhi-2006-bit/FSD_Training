@@ -97,14 +97,14 @@ app.delete("/students/:id", (req, res) => {
         });
     }
     students = students.filter(
-        s => s.id != req.params.id
+        s=>s.id!= req.params.id
     );
     saveStudents(students);
     res.json({
-        message: "Student deleted successfully",
+        message:"Student deleted successfully",
         data: student
     });
 });
-app.listen(3000, () => {
+app.listen(3000,()=>{
     console.log("Server running on port 3000");
 });
