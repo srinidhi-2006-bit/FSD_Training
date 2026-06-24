@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Student</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script>
+		if(!localStorage.getItem("loggedInUser")){
+		    window.location.href="login.html";
+		}
+	</script>
+	<div class="container">
+		<h2>Add Student</h2>
+		<input type="text" id="rollNo" placeholder="Roll Number">
+		<input type="text" id="name" placeholder="Student Name">
+		<input type="text" id="branch" placeholder="Branch">
+		<input type="number" step="0.01" id="cgpa" placeholder="CGPA">
+		<button onclick="saveStudent()">Save Student</button>
+	</div>
+	<script src="js/add-student.js"></script>
+</body>
+</html>

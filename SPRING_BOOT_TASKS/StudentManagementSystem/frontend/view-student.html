@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Students</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script>
+		if(!localStorage.getItem("loggedInUser")){
+		    window.location.href="login.html";
+		}
+	</script>
+	<h2>Student List</h2>
+	<input type="text" id="searchName" placeholder="Search Student">
+	<button onclick="searchStudent()">Search</button>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Roll No</th>
+				<th>Name</th>
+				<th>Branch</th>
+				<th>CGPA</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody id="studentTable">
+		</tbody>
+	</table>
+	<br>
+	<a href="dashboard.html"><button>Back</button></a>
+	<script src="js/view-student.js"></script>
+</body>
+</html>

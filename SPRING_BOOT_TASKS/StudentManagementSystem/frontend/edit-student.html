@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Student</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script>
+		if(!localStorage.getItem("loggedInUser")){
+		    window.location.href="login.html";
+		}
+	</script>
+	<div class="container">
+		<h2>Edit Student</h2>
+		<input type="text" id="rollNo">
+		<input type="text" id="name">
+		<input type="text" id="branch">
+		<input type="number" step="0.01" id="cgpa">
+		<button onclick="updateStudent()">Update Student</button>
+	</div>
+	<script src="js/edit-student.js"></script>
+</body>
+</html>

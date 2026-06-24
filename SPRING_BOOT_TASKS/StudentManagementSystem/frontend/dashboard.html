@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script>
+		if(!localStorage.getItem("loggedInUser")){
+		    window.location.href="login.html";
+		}
+	</script>
+	<h1>Student Management System</h1>
+	<h3>
+		Welcome
+		<span id="user"></span>
+	</h3>
+	<div class="card">
+	    <h3>Total Students</h3>
+	    <h1 id="studentCount">0</h1>
+	</div>
+	<div class="card">
+	    <h3>Total Users</h3>
+	    <h1 id="userCount">0</h1>
+	</div>
+	<br>
+	<a href="add-student.html">
+	<button>Add Student</button>
+	</a>
+	<a href="view-student.html">
+	<button>View Students</button>
+	</a>
+	<br><br>
+	<button onclick="logout()">Logout</button>
+	<script>
+		document.getElementById("user").innerText =
+		localStorage.getItem("loggedInUser");
+	</script>
+	<script src="js/logout.js"></script>
+</body>
+</html>
